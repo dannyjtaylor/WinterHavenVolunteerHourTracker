@@ -22,7 +22,7 @@ async function loadVolunteers() {
             <td>${volunteer.hours}</td>
         `;
         tbody.appendChild(row);
-    });xd
+    });
 }
 
 // Handle form submission to add hours

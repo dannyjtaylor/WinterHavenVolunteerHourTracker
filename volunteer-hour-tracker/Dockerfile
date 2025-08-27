@@ -5,8 +5,10 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+COPY backend/main.py ./main.py
+COPY app/static ./app/static
+COPY app/templates ./app/templates
 
 EXPOSE 8000
 
-CMD ["python", "app.py"]
+CMD ["python", "main.py"]
