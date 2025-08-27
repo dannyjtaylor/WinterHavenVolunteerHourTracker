@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Hour Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Volunteer Hour Tracker</h1>
+        <table id="volunteer-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Total Hours</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Volunteer data will be populated here by JavaScript -->
+            </tbody>
+        </table>
+        <form id="add-volunteer-form">
+            <input type="text" id="volunteer-name" placeholder="Volunteer Name" required>
+            <input type="number" id="volunteer-hours" placeholder="Hours" required>
+            <button type="submit">Add Hours</button>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
